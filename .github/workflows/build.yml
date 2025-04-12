@@ -11,8 +11,8 @@ jobs:
         with:
           submodules: true
 
-      - name: Install gcc-multilib
-        run: sudo apt install gcc-multilib
+      - name: Install g++-multilib
+        run: sudo apt install g++-multilib
 
       - name: CMake configure (x86)
         run: cmake -DCMAKE_CXX_FLAGS=-m32 -B release-x86 GenerateBindings -G Ninja -DCMAKE_BUILD_TYPE=Release
