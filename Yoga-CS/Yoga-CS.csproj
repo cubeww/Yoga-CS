@@ -1,11 +1,56 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <RootNamespace>Yoga_CS</RootNamespace>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-  </PropertyGroup>
-
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<RootNamespace>Yoga</RootNamespace>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Title>yoga</Title>
+		<Description>C# bindings for yoga</Description>
+		<PackageTags>yoga;layout;flexbox;gui</PackageTags>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<Authors>NyaCube</Authors>
+		<PackageProjectUrl>https://github.com/cubeww/Yoga-CS.git</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/cubeww/Yoga-CS.git</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<Version>1.0.0</Version>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Include="$(MSBuildThisFileDirectory)..\native\win-x64\yoga.dll">
+			<PackagePath>runtimes/win-x64/native</PackagePath>
+			<Pack>true</Pack>
+		</None>
+		<None Include="$(MSBuildThisFileDirectory)..\native\win-x86\yoga.dll">
+			<PackagePath>runtimes/win-x86/native</PackagePath>
+			<Pack>true</Pack>
+		</None>
+		<None Include="$(MSBuildThisFileDirectory)..\native\win-arm64\yoga.dll">
+			<PackagePath>runtimes/win-arm64/native</PackagePath>
+			<Pack>true</Pack>
+		</None>
+		<None Include="$(MSBuildThisFileDirectory)..\native\linux-x64\libyoga.so">
+			<PackagePath>runtimes/linux-x64/native</PackagePath>
+			<Pack>true</Pack>
+		</None>
+		<None Include="$(MSBuildThisFileDirectory)..\native\linux-x86\libyoga.so">
+			<PackagePath>runtimes/linux-x86/native</PackagePath>
+			<Pack>true</Pack>
+		</None>
+		<None Include="$(MSBuildThisFileDirectory)..\native\linux-arm64\libyoga.so">
+			<PackagePath>runtimes/linux-arm64/native</PackagePath>
+			<Pack>true</Pack>
+		</None>
+		<None Include="$(MSBuildThisFileDirectory)..\native\osx-x64\libyoga.dylib">
+			<PackagePath>runtimes/osx-x64/native</PackagePath>
+			<Pack>true</Pack>
+		</None>
+		<None Include="$(MSBuildThisFileDirectory)..\native\osx-arm64\libyoga.dylib">
+			<PackagePath>runtimes/osx-arm64/native</PackagePath>
+			<Pack>true</Pack>
+		</None>
+		<None Include="..\README.md" Pack="true" PackagePath="\"/>
+	</ItemGroup>
 </Project>
