@@ -1,0 +1,3 @@
+[submodule "GenerateBindings/yoga"]
+	path = GenerateBindings/yoga
+	url = https://github.com/facebook/yoga
